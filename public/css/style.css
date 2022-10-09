@@ -1,0 +1,12 @@
+@charset "UTF-8";
+a {
+    color: #0156b3;
+    text-decoration: none;
+    border-bottom: 1px solid #0156b3;
+}
+
+.text-decoration-none {
+    color: #0156b3;
+    text-decoration: none;
+    border-bottom: 1px solid #0156b3;
+}

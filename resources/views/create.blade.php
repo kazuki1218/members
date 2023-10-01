@@ -68,7 +68,7 @@
                     />
                 </div>
                 <div class="text-center m-3">
-                    <input class="w-50" type="submit" value="登録">  
+                    <input class="w-50" type="submit" value="登録">
                 </div>
             </form>
         </div>

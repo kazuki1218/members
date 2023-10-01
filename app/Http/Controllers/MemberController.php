@@ -16,10 +16,9 @@ class MemberController extends Controller
     public function index()
     {
         //memberテーブルからname,phone,email1を$membersに格納
-        $members=DB::table('members')
-        ->select('id', 'name', 'phone', 'email')
-        ->get();
-
+        $members = DB::table('members')
+            ->select('id', 'name', 'phone', 'email')
+            ->get();
         //viewに返す()
         return view('/index', compact('members'));
     }
@@ -44,11 +43,11 @@ class MemberController extends Controller
     public function store(Request $request)
     {
         // フォームで入力された値の登録処理
-        $member= new Member;
+        $member = new Member;
 
-        $member->name=$request->input('name');
-        $member->phone=$request->input('phone');
-        $member->email=$request->input('email');
+        $member->name = $request->input('name');
+        $member->phone = $request->input('phone');
+        $member->email = $request->input('email');
 
         $member->save();
 
@@ -65,7 +64,7 @@ class MemberController extends Controller
     public function show($id)
     {
         // 詳細画面表示
-        $member=Member::find($id);
+        $member = Member::find($id);
         return view('/show', compact('member'));
     }
 
@@ -78,7 +77,7 @@ class MemberController extends Controller
     public function edit($id)
     {
         // 編集画面表示
-        $member=Member::find($id);
+        $member = Member::find($id);
 
         return view('/edit', compact('member'));
     }
@@ -93,11 +92,11 @@ class MemberController extends Controller
     public function update(Request $request, $id)
     {
         // 更新処理
-        $member=Member::find($id);
+        $member = Member::find($id);
 
-        $member->name=$request->input('name');
-        $member->phone=$request->input('phone');
-        $member->email=$request->input('email');
+        $member->name = $request->input('name');
+        $member->phone = $request->input('phone');
+        $member->email = $request->input('email');
 
         //DBに保存
         $member->save();
@@ -115,7 +114,7 @@ class MemberController extends Controller
     public function destroy($id)
     {
         // 削除処理
-        $member=Member::find($id);
+        $member = Member::find($id);
 
         $member->delete();
 

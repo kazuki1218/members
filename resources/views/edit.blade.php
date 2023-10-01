@@ -22,7 +22,7 @@
     </head>
     <body>
         <!-- main(本文) -->
-        <h2 class="text-center mt-5 mb-2">会員編集 会員ID:{{$member->id}}</h2>
+        <h2 class="text-center mt-5 mb-2">会員編集 会員ID:{{ $member->id }}</h2>
         <div class="w-50 m-auto align-items-center d-block">
             <div class="text-right mb-2">
                 <a class="text-decoration-none" href="{{ route('index') }}">{{

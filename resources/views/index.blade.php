@@ -39,7 +39,7 @@
                     <td>{{$member->phone}}</td>
                     <td>{{$member->email}}</td>
                     <td class="text-center">
-                        <a class="text-decoration-none " href="{{route('edit',['id'=>$member->id])}}">{{
+                        <a class="text-decoration-none " href="{{ route('edit',['id'=>$member->id])}}">{{
                             __(">>編集")
                         }}</a>
                     </td>
